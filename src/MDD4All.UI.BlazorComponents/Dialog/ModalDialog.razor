@@ -27,6 +27,11 @@
                         <button type="button" class="btn" @onclick="@ModalCancel">@L["Button.Cancel"]</button>
                         <button type="button" class="btn btn-danger" @onclick=@ModalOk>@ConfirmLabel("Delete")</button>
                         break;
+                    case ModalDialogType.SaveDiscardCancel:
+                        <button type="button" class="btn" @onclick="@ModalCancel">@L["Button.Cancel"]</button>
+                        <button type="button" class="btn btn-danger" @onclick=@ModalDiscard>@DiscardLabel("Discard")</button>
+                        <button type="button" class="btn btn-primary" @onclick=@ModalOk>@ConfirmLabel("Save")</button>
+                        break;
                 }
             </div>
         </div>
